@@ -1,6 +1,5 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+# Edit this configuration file to define what should be installed on your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual 
+# (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
 
@@ -89,6 +88,16 @@
     packages = with pkgs; [
     #  thunderbird
     ];
+  };
+
+  # Configurações do Home Manager para o seu usuário
+
+    home-manager.users.alvarobf = {
+    # Define a versão do estado para garantir compatibilidade
+    home.stateVersion = "24.05";
+
+    # Habilita o serviço do Conky para iniciar automaticamente
+    services.conky.enable = true;
   };
 
   # Install firefox.
