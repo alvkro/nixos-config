@@ -127,6 +127,7 @@
 	gnome-session
 	cowsay
 	psmisc
+	wasistlos
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
